@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vasanth//Second Date//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:second-date-2026-09-27-chandana-vasanth
+DTSTAMP:20260924T160000Z
+DTSTART:20260927T150000Z
+DTEND:20260927T210000Z
+SUMMARY:Second date with Vasanth
+LOCATION:Ariston Flowers & Cafe\, 78 5th Ave\, New York\, NY 10011
+DESCRIPTION:11-ish — Coffee among the flowers at Ariston (78 5th Ave)\n1:
+ 00 PM — Mercer Labs\, Museum of Art & Technology (21 Dey St)\n3:00 PM 
+ — Late lunch at Lillie's Victorian Establishment (13 E 17th St)
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Coffee with Vasanth in 2 hours
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

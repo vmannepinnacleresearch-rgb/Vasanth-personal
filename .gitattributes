@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Calendar files must keep CRLF line endings
+*.ics -text

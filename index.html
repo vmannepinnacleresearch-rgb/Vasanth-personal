@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Chandana</title>
+<meta name="description" content="A proper invitation for Sunday, September 27.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="For Chandana 💌">
+<meta property="og:description" content="A proper invitation for Sunday, September 27. Open with care.">
+<meta name="theme-color" content="#3e1119">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8C%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fbf6ec;
+    --paper-2: #f3e8d4;
+    --paper-3: #e9dabd;
+    --ink: #2e1d1a;
+    --ink-soft: #5b4640;
+    --wine: #7a1f2b;
+    --wine-deep: #4a1520;
+    --gold: #b08d57;
+    --gold-soft: #d9bf8f;
+    --blush: #f3d9c4;
+    --sage: #6f7d5c;
+    --subway: #00933c;
+    --serif: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --script: "Pinyon Script", "Snell Roundhand", "Apple Chancery", cursive;
+    --sans: "Jost", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    --ease: cubic-bezier(.2, .7, .2, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #2a0b11;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  button { font: inherit; color: inherit; }
+  a { color: inherit; }
+  [hidden] { display: none !important; }
+  [tabindex="-1"]:focus { outline: none; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---------- Backdrop ---------- */
+  .backdrop {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+    background:
+      radial-gradient(120% 80% at 50% 0%, #7a2433 0%, rgba(122, 36, 51, 0) 60%),
+      radial-gradient(90% 70% at 50% 110%, #5a1826 0%, rgba(90, 24, 38, 0) 70%),
+      linear-gradient(180deg, #4a1520 0%, #33101a 55%, #240810 100%);
+  }
+  .backdrop::after {
+    content: ""; position: absolute; inset: 0; opacity: .07; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .ambient { position: absolute; top: -8vh; width: 12px; height: 15px; opacity: 0;
+    border-radius: 150% 0 150% 0; background: linear-gradient(135deg, #f6c9c3, #d98c8f);
+    animation: drift linear infinite; }
+  @keyframes drift {
+    0% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+    10% { opacity: .35; }
+    90% { opacity: .35; }
+    100% { transform: translate3d(var(--dx, 40px), 118vh, 0) rotate(540deg); opacity: 0; }
+  }
+
+  /* ---------- Stages ---------- */
+  main { position: relative; z-index: 1; }
+  .stage {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+             max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+  .stage.is-entering { animation: stageIn .8s var(--ease) both; }
+  .stage.is-leaving { animation: stageOut .5s ease both; pointer-events: none; }
+  @keyframes stageIn { from { opacity: 0; transform: translateY(24px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes stageOut { to { opacity: 0; transform: translateY(-12px) scale(.98); } }
+
+  .eyebrow {
+    font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: .28em;
+    text-transform: uppercase; color: var(--gold-soft); margin: 0;
+  }
+
+  /* ---------- Stage 1: Envelope ---------- */
+  .envelope-stage { gap: 28px; text-align: center; }
+  .envelope-stage .intro { transition: opacity .5s ease, transform .5s ease; }
+  .envelope-stage .intro h1 {
+    font-family: var(--script); font-weight: 400; color: var(--blush);
+    font-size: clamp(40px, 11vw, 60px); line-height: 1.1; margin: 10px 0 0;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, .35);
+  }
+  .opened .intro, .opened .tap-hint { opacity: 0; transform: translateY(-8px); }
+
+  .envelope {
+    position: relative; display: block; padding: 0; border: 0; background: none; cursor: pointer;
+    -webkit-appearance: none; appearance: none;
+    width: min(84vw, 440px); aspect-ratio: 10 / 7;
+    -webkit-perspective: 1400px; perspective: 1400px;
+    touch-action: manipulation; -webkit-user-select: none; user-select: none;
+    margin-top: 12px;
+    animation: floaty 5s ease-in-out infinite;
+  }
+  .opened .envelope { animation: none; cursor: default; }
+  @keyframes floaty { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-8px) rotate(.6deg); } }
+  .envelope:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 10px; border-radius: 10px; }
+  .envelope > span { position: absolute; }
+
+  .env-back {
+    inset: 0; border-radius: 8px;
+    background:
+      repeating-linear-gradient(45deg, rgba(217, 191, 143, .16) 0 2px, transparent 2px 12px),
+      repeating-linear-gradient(-45deg, rgba(217, 191, 143, .16) 0 2px, transparent 2px 12px),
+      linear-gradient(180deg, #6d1b28, #52131e);
+    box-shadow: 0 26px 50px rgba(0, 0, 0, .45), 0 6px 14px rgba(0, 0, 0, .25);
+  }
+  .letter-peek {
+    left: 6%; right: 6%; top: 7%; height: 86%; z-index: 2;
+    background: linear-gradient(180deg, #fffaf1, var(--paper));
+    border-radius: 3px; box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+    padding: 7% 8%; text-align: left;
+    transition: transform 1s var(--ease);
+  }
+  .letter-peek .peek-dear { font-family: var(--script); color: var(--wine); font-size: clamp(22px, 6vw, 30px); line-height: 1.2; display: block; }
+  .letter-peek .peek-line { display: block; height: 2px; margin-top: 10%; background: rgba(46, 29, 26, .12); border-radius: 2px; }
+  .letter-peek .peek-line + .peek-line { width: 78%; margin-top: 6%; }
+  .opened .letter-peek { transform: translateY(-48%); transition-delay: .45s; }
+
+  .env-pocket { inset: 0; z-index: 3; width: 100%; height: 100%; }
+  .env-pocket svg { display: block; width: 100%; height: 100%; }
+  .env-address {
+    left: 0; right: 0; bottom: 9%; z-index: 4; text-align: center; pointer-events: none;
+  }
+  .env-address .to { display: block; font-family: var(--script); color: var(--wine); font-size: clamp(26px, 7.4vw, 38px); line-height: 1.1; }
+  .env-address .when { display: block; margin-top: 4px; font-family: var(--sans); font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); }
+
+  .flap {
+    left: 0; right: 0; top: 0; height: 48%; z-index: 5;
+    -webkit-transform-origin: 50% 0; transform-origin: 50% 0;
+    -webkit-transform-style: preserve-3d; transform-style: preserve-3d;
+    transition: transform .8s cubic-bezier(.45, .05, .25, 1);
+  }
+  .flap-face {
+    position: absolute; inset: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%); clip-path: polygon(0 0, 100% 0, 50% 100%);
+    -webkit-backface-visibility: hidden; backface-visibility: hidden;
+  }
+  .flap-front { background: linear-gradient(180deg, #f1e4cb 0%, #eadbbd 100%); }
+  .flap-front::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 70%, rgba(120, 80, 40, .12)); }
+  .flap-back {
+    -webkit-transform: rotateX(180deg); transform: rotateX(180deg);
+    background:
+      repeating-linear-gradient(45deg, rgba(217, 191, 143, .2) 0 2px, transparent 2px 12px),
+      linear-gradient(0deg, #6d1b28, #57141f);
+  }
+  .opened .flap { -webkit-transform: rotateX(180deg); transform: rotateX(180deg); }
+  .flap-behind .flap { z-index: 1; }
+
+  .seal {
+    left: 50%; top: 48%; z-index: 6; width: 62px; height: 62px; margin: -31px 0 0 -31px;
+    border-radius: 50% 46% 52% 48% / 48% 52% 47% 53%;
+    background: radial-gradient(circle at 34% 30%, #c0435a 0%, #8f2034 42%, #5e1320 100%);
+    box-shadow: inset 0 0 0 5px rgba(0, 0, 0, .12), inset 0 -3px 6px rgba(0, 0, 0, .3), 0 4px 10px rgba(0, 0, 0, .35);
+    display: grid; place-items: center;
+  }
+  .seal::before {
+    content: ""; position: absolute; inset: 8px; border-radius: 50%;
+    border: 1.5px solid rgba(255, 214, 196, .35); box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+  }
+  .seal b {
+    font-family: var(--script); font-weight: 400; font-size: 34px; line-height: 1; color: #f7cfc0;
+    transform: translate(1px, 3px);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .35), 0 1px 0 rgba(255, 255, 255, .15);
+  }
+  .opened .seal { animation: sealBreak .55s ease-in forwards; }
+  @keyframes sealBreak {
+    0% { transform: scale(1); }
+    35% { transform: scale(1.14) rotate(-6deg); }
+    100% { transform: translateY(60px) rotate(28deg) scale(.5); opacity: 0; }
+  }
+
+  .tap-hint {
+    margin: 6px 0 0; font-family: var(--sans); font-size: 14px; letter-spacing: .18em; text-transform: uppercase;
+    color: rgba(243, 217, 196, .85); transition: opacity .4s ease, transform .4s ease;
+  }
+  .tap-hint span { display: inline-block; animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+
+  /* ---------- Paper card (letter + plan) ---------- */
+  .paper {
+    position: relative; width: min(100%, 480px);
+    background:
+      radial-gradient(120% 60% at 0% 0%, rgba(233, 218, 189, .55), transparent 60%),
+      radial-gradient(100% 60% at 100% 100%, rgba(233, 218, 189, .5), transparent 60%),
+      var(--paper);
+    border-radius: 4px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .45), 0 8px 18px rgba(0, 0, 0, .25);
+    padding: clamp(34px, 8vw, 52px) clamp(24px, 7vw, 48px);
+  }
+  .paper::before {
+    content: ""; position: absolute; inset: 10px; pointer-events: none; border-radius: 2px;
+    border: 1px solid rgba(176, 141, 87, .55);
+  }
+  .paper::after {
+    content: ""; position: absolute; inset: 14px; pointer-events: none;
+    border: 1px solid rgba(176, 141, 87, .22);
+  }
+  .sprig { position: absolute; width: 64px; height: 64px; color: var(--sage); opacity: .55; pointer-events: none; }
+  .sprig.tl { top: 16px; left: 16px; }
+  .sprig.tr { top: 16px; right: 16px; transform: scaleX(-1); }
+  .flourish { display: block; width: 150px; height: 22px; margin: 0 auto; color: var(--gold); }
+
+  /* ---------- Stage 2: Letter ---------- */
+  .letter { text-align: center; }
+  .letter .dear { font-family: var(--script); font-weight: 400; color: var(--wine); font-size: clamp(38px, 10vw, 50px); line-height: 1.1; margin: 18px 0 12px; }
+  .letter p { margin: 0 0 12px; font-size: clamp(18px, 4.8vw, 20px); color: var(--ink); }
+  .letter .knowing { font-style: italic; font-size: clamp(20px, 5.4vw, 23px); color: var(--wine); }
+  .letter .officially { font-family: var(--sans); font-size: 13px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-soft); margin: 20px 0 6px; }
+  .letter .ask { font-family: var(--serif); font-weight: 500; font-size: clamp(27px, 7.4vw, 34px); line-height: 1.15; margin: 0 0 6px; color: var(--ink); }
+  .letter .ask-date { font-style: italic; color: var(--ink-soft); margin-bottom: 22px; }
+
+  .line-in { opacity: 0; transform: translateY(10px); }
+  .is-entering .line-in, .shown .line-in { animation: lineIn .7s var(--ease) forwards; animation-delay: calc(var(--i, 0) * 140ms + 250ms); }
+  @keyframes lineIn { to { opacity: 1; transform: none; } }
+
+  .choices { display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap; min-height: 56px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 52px; padding: 0 28px; border-radius: 999px; cursor: pointer;
+    font-family: var(--sans); font-size: 16px; font-weight: 500; letter-spacing: .06em;
+    text-decoration: none; touch-action: manipulation; -webkit-user-select: none; user-select: none;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .btn-yes { background: var(--wine); color: #fff6ee; border: 0; box-shadow: 0 8px 20px rgba(122, 31, 43, .35); }
+  .btn-yes:hover { background: #8a2433; }
+  .btn-yes.only-choice { animation: glow 1.8s ease-in-out infinite; }
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 8px 20px rgba(122, 31, 43, .35), 0 0 0 0 rgba(122, 31, 43, .35); }
+    50% { box-shadow: 0 8px 20px rgba(122, 31, 43, .35), 0 0 0 10px rgba(122, 31, 43, 0); }
+  }
+  .btn-no { background: transparent; border: 1px solid rgba(46, 29, 26, .35); color: var(--ink); min-width: 96px; }
+  @media (hover: hover) {
+    .btn-no:hover { animation: nervous .35s ease-in-out infinite; }
+  }
+  @keyframes nervous { 0%, 100% { transform: translateX(0) rotate(0); } 25% { transform: translateX(-2px) rotate(-2deg); } 75% { transform: translateX(2px) rotate(2deg); } }
+
+  /* the No button, as a balloon */
+  .balloon {
+    position: fixed; z-index: 60; margin: 0; pointer-events: none;
+    background: #fff6ee; border-color: rgba(122, 31, 43, .5); color: var(--wine);
+    animation: floatAway 3.6s cubic-bezier(.45, 0, .6, 1) forwards;
+  }
+  .balloon::after {
+    content: ""; position: absolute; left: 50%; top: 100%; width: 1.5px; height: 70px; margin-left: -.75px;
+    background: linear-gradient(180deg, rgba(122, 31, 43, .7), rgba(122, 31, 43, 0));
+    transform-origin: top center; animation: stringSway 1.2s ease-in-out infinite alternate;
+  }
+  @keyframes stringSway { from { transform: rotate(-8deg); } to { transform: rotate(8deg); } }
+  @keyframes floatAway {
+    0% { transform: translate(0, 0) rotate(0) scale(1); }
+    10% { transform: translate(0, 6px) rotate(-4deg) scale(1.1); }
+    30% { transform: translate(22px, -18vh) rotate(7deg) scale(1.04); }
+    50% { transform: translate(-16px, -42vh) rotate(-8deg) scale(.96); }
+    72% { transform: translate(24px, -70vh) rotate(9deg) scale(.88); opacity: 1; }
+    100% { transform: translate(-12px, -125vh) rotate(-12deg) scale(.78); opacity: 0; }
+  }
+  .no-note {
+    min-height: 0; margin: 16px auto 0 !important; max-width: 30ch;
+    font-style: italic; font-size: 18px !important; color: var(--wine) !important;
+  }
+  .no-note:empty { display: none; }
+  .no-note.show { animation: lineIn .6s var(--ease) both; }
+
+  /* ---------- Stage 3: Accepted ---------- */
+  .accepted { text-align: center; color: var(--blush); }
+  .accepted .big { font-family: var(--script); font-weight: 400; font-size: clamp(64px, 19vw, 104px); line-height: 1; margin: 0 0 14px; color: #fbe3d3; text-shadow: 0 4px 30px rgba(0, 0, 0, .35); }
+  .accepted .sub { font-style: italic; font-size: clamp(21px, 5.6vw, 26px); margin: 0 0 8px; color: #f6e6da; }
+  .accepted .eyebrow { margin-top: 18px; }
+  .btn-light { margin-top: 30px; background: rgba(251, 246, 236, .08); border: 1px solid rgba(243, 217, 196, .55); color: #fbe9dc; }
+  .btn-light:hover { background: rgba(251, 246, 236, .16); }
+
+  .petal-layer { position: fixed; inset: 0; z-index: 50; pointer-events: none; overflow: hidden; }
+  .petal-fall { position: absolute; top: -40px; animation: fall linear forwards; }
+  .petal-fall i {
+    display: block; width: var(--w, 14px); height: calc(var(--w, 14px) * 1.25);
+    border-radius: 150% 0 150% 0; background: var(--c, #e8a3a5);
+    animation: sway ease-in-out infinite alternate; animation-duration: var(--sway, 1.6s);
+    box-shadow: inset -2px -2px 4px rgba(0, 0, 0, .08);
+  }
+  @keyframes fall { to { transform: translate3d(0, 115vh, 0); } }
+  @keyframes sway { from { transform: translateX(-18px) rotate(-30deg); } to { transform: translateX(18px) rotate(60deg); } }
+
+  /* ---------- Stage 4: Plan ---------- */
+  .plan-stage { justify-content: flex-start; padding-top: max(36px, env(safe-area-inset-top)); padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+  .plan { width: min(100%, 580px); text-align: center; }
+  .plan-head .eyebrow { color: var(--gold); margin-top: 16px; }
+  .plan-head h2 { font-family: var(--script); font-weight: 400; color: var(--wine); font-size: clamp(56px, 16vw, 76px); line-height: 1; margin: 8px 0 6px; }
+  .plan-head .lede { font-style: italic; font-size: 20px; color: var(--ink-soft); margin: 0 auto 26px; max-width: 30ch; }
+
+  .timeline { list-style: none; margin: 0; padding: 0; text-align: left; }
+  .stop { position: relative; display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; }
+  .stop-marker {
+    width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--wine); color: #fbe9dc; font-family: var(--serif); font-weight: 600; font-size: 18px; letter-spacing: .04em;
+    box-shadow: 0 0 0 4px var(--paper), 0 0 0 5px rgba(176, 141, 87, .6);
+    position: relative; z-index: 1;
+  }
+  .stop-body { padding-bottom: 6px; }
+  .stop:not(:last-child)::before {
+    content: ""; position: absolute; left: 21px; top: 48px; bottom: 0; width: 2px;
+    background: repeating-linear-gradient(180deg, rgba(122, 31, 43, .45) 0 6px, transparent 6px 12px);
+  }
+  .stop-time { margin: 2px 0 2px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+  .stop-time .time { font-family: var(--serif); font-weight: 600; font-size: 26px; color: var(--ink); line-height: 1.1; }
+  .stop-time .time small { font-size: 15px; font-weight: 500; letter-spacing: .06em; margin-left: 2px; }
+  .stop-time .act { font-family: var(--sans); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+  .stop-name { font-family: var(--serif); font-weight: 600; font-size: clamp(25px, 6.6vw, 30px); line-height: 1.12; margin: 6px 0 2px; color: var(--wine); }
+  .stop-kind { margin: 0 0 8px; font-family: var(--sans); font-size: 14px; letter-spacing: .06em; color: var(--ink-soft); }
+  .stop-blurb { margin: 0 0 10px; font-size: 19px; line-height: 1.45; }
+  .stop-map {
+    display: inline-flex; align-items: center; gap: 6px; min-height: 44px;
+    font-family: var(--sans); font-size: 15px; color: var(--wine); text-decoration: none;
+  }
+  .stop-map .addr { text-decoration: underline; text-decoration-color: rgba(122, 31, 43, .35); text-underline-offset: 4px; }
+  .stop-map:hover .addr { text-decoration-color: var(--wine); }
+  .stop-map:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .stop-map svg { width: 16px; height: 16px; flex: none; }
+
+  .leg {
+    position: relative; display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; align-items: center;
+    margin: 4px 0; min-height: 64px;
+  }
+  .leg::before {
+    content: ""; justify-self: center; align-self: stretch; width: 2px; min-height: 64px;
+    background: repeating-linear-gradient(180deg, rgba(122, 31, 43, .45) 0 6px, transparent 6px 12px);
+  }
+  .leg p { margin: 0; display: flex; align-items: center; gap: 10px; font-family: var(--sans); font-size: 14px; line-height: 1.4; color: var(--ink-soft); letter-spacing: .02em; }
+  .leg .trains { display: flex; gap: 4px; flex: none; }
+  .bullet {
+    display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--subway); color: #fff; font-family: var(--sans); font-weight: 500; font-size: 14px; line-height: 1;
+  }
+
+  .notes {
+    margin: 30px 0 0; padding: 20px 20px 8px; text-align: left;
+    border-top: 1px solid rgba(176, 141, 87, .45); border-bottom: 1px solid rgba(176, 141, 87, .45);
+  }
+  .notes h3 { margin: 0 0 10px; text-align: center; font-family: var(--sans); font-weight: 500; font-size: 13px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); }
+  .notes ul { margin: 0; padding: 0; list-style: none; }
+  .notes li { position: relative; padding-left: 24px; margin: 0 0 12px; font-size: 18px; }
+  .notes li::before { content: "✿"; position: absolute; left: 0; top: 1px; color: var(--wine); font-size: 15px; }
+
+  .signoff { margin: 28px 0 0; }
+  .signoff p { margin: 0; font-style: italic; font-size: 21px; }
+  .signoff .name { font-family: var(--script); font-style: normal; color: var(--wine); font-size: 46px; line-height: 1.2; margin-top: 4px; }
+  .ps { margin: 16px auto 0; max-width: 34ch; font-size: 17px; font-style: italic; color: var(--ink-soft); }
+
+  .actions { margin-top: 28px; display: grid; gap: 10px; }
+  .actions .row { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  @media (min-width: 640px) { .actions .row { grid-template-columns: 1fr 1fr; } }
+  .btn-outline { background: transparent; border: 1px solid rgba(122, 31, 43, .45); color: var(--wine); padding: 0 14px; font-size: 15px; letter-spacing: .03em; }
+  .btn-outline:hover { background: rgba(122, 31, 43, .06); }
+  .btn-outline svg, .btn-yes svg { width: 18px; height: 18px; flex: none; }
+  .replay {
+    display: inline-flex; align-items: center; min-height: 44px; margin-top: 18px; padding: 0 12px; border: 0; background: none;
+    font-family: var(--sans); font-size: 14px; letter-spacing: .08em; color: rgba(243, 217, 196, .8); cursor: pointer;
+    text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(243, 217, 196, .35);
+  }
+  .replay:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 2px; border-radius: 4px; }
+
+  .reveal { opacity: 0; transform: translateY(16px); }
+  .shown .reveal { animation: lineIn .8s var(--ease) forwards; animation-delay: calc(var(--i, 0) * 130ms + 150ms); }
+
+  .toast {
+    position: fixed; left: 50%; bottom: max(24px, env(safe-area-inset-bottom)); z-index: 70;
+    transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+    max-width: calc(100vw - 32px); padding: 12px 18px; border-radius: 12px;
+    background: #2e1d1a; color: #fbe9dc; font-family: var(--sans); font-size: 15px; text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35); transition: opacity .3s ease, transform .3s ease;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (min-width: 900px) {
+    .paper { width: 520px; }
+    .plan.paper { width: 600px; }
+  }
+  @media (max-height: 700px) and (max-width: 500px) {
+    .envelope-stage { gap: 18px; }
+    .letter .dear { margin: 6px 0 8px; }
+    .letter p { margin-bottom: 9px; }
+    .letter .officially { margin-top: 12px; }
+    .letter .ask-date { margin-bottom: 16px; }
+    .paper { padding-top: 30px; padding-bottom: 30px; }
+    .sprig { width: 58px; height: 58px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    .stage.is-entering, .stage.is-leaving { animation: none !important; }
+    .line-in, .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+    .ambient, .petal-layer { display: none !important; }
+    .envelope { animation: none !important; }
+    .balloon { animation: fadeAway .6s ease forwards !important; animation-duration: .6s !important; }
+    @keyframes fadeAway { to { opacity: 0; } }
+  }
+</style>
+</head>
+<body data-stage="envelope">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="pocketGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7eedd"/>
+      <stop offset="1" stop-color="#efe2c8"/>
+    </linearGradient>
+  </defs>
+  <symbol id="flourish" viewBox="0 0 160 24">
+    <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+      <path d="M8 12 H54"/><path d="M106 12 H152"/>
+      <path d="M20 12 c6 -6 12 -6 16 0" opacity=".7"/><path d="M124 12 c6 -6 12 -6 16 0" opacity=".7"/>
+    </g>
+    <g fill="currentColor">
+      <circle cx="5" cy="12" r="1.6"/><circle cx="155" cy="12" r="1.6"/>
+      <ellipse cx="64" cy="9" rx="6.5" ry="2.2" transform="rotate(-22 64 9)"/>
+      <ellipse cx="64" cy="15" rx="6.5" ry="2.2" transform="rotate(22 64 15)"/>
+      <ellipse cx="96" cy="9" rx="6.5" ry="2.2" transform="rotate(22 96 9)"/>
+      <ellipse cx="96" cy="15" rx="6.5" ry="2.2" transform="rotate(-22 96 15)"/>
+      <g transform="translate(80 12)">
+        <ellipse cy="-5.5" rx="3" ry="5"/>
+        <ellipse cy="-5.5" rx="3" ry="5" transform="rotate(72)"/>
+        <ellipse cy="-5.5" rx="3" ry="5" transform="rotate(144)"/>
+        <ellipse cy="-5.5" rx="3" ry="5" transform="rotate(216)"/>
+        <ellipse cy="-5.5" rx="3" ry="5" transform="rotate(288)"/>
+      </g>
+    </g>
+    <circle cx="80" cy="12" r="2.2" fill="#fbf6ec"/>
+  </symbol>
+  <symbol id="sprig" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+      <path d="M4 4 C 22 18, 34 34, 44 58 S 58 88, 62 96"/>
+      <path d="M22 16 C 34 12, 48 12, 60 6"/>
+    </g>
+    <g fill="currentColor">
+      <ellipse cx="18" cy="22" rx="7" ry="2.6" transform="rotate(62 18 22)"/>
+      <ellipse cx="30" cy="22" rx="7" ry="2.6" transform="rotate(-12 30 22)"/>
+      <ellipse cx="32" cy="42" rx="8" ry="2.8" transform="rotate(70 32 42)"/>
+      <ellipse cx="46" cy="38" rx="8" ry="2.8" transform="rotate(-8 46 38)"/>
+      <ellipse cx="40" cy="64" rx="8" ry="2.8" transform="rotate(78 40 64)"/>
+      <ellipse cx="54" cy="62" rx="8" ry="2.8" transform="rotate(4 54 62)"/>
+      <ellipse cx="46" cy="10" rx="5" ry="2" transform="rotate(-20 46 10)"/>
+      <g transform="translate(62 6)">
+        <circle r="4.2" cx="0" cy="-3.6"/><circle r="4.2" cx="3.4" cy="-1.1"/><circle r="4.2" cx="2.1" cy="3"/>
+        <circle r="4.2" cx="-2.1" cy="3"/><circle r="4.2" cx="-3.4" cy="-1.1"/>
+      </g>
+    </g>
+    <circle cx="62" cy="6" r="2.2" fill="#fbf6ec"/>
+  </symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21s-6.5-6.2-6.5-11.2A6.5 6.5 0 0 1 18.5 9.8C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.5s-7.5-4.6-9.3-9.6C1.5 7.4 3.8 4 7.3 4c2 0 3.5 1.1 4.7 2.8C13.2 5.1 14.7 4 16.7 4c3.5 0 5.8 3.4 4.6 6.9-1.8 5-9.3 9.6-9.3 9.6z"/></symbol>
+</svg>
+
+<div class="backdrop" aria-hidden="true" id="backdrop"></div>
+<div class="petal-layer" aria-hidden="true" id="petals"></div>
+<div class="sr-only" aria-live="polite" id="announcer"></div>
+<div class="toast" role="status" id="toast"></div>
+
+<main>
+  <!-- 1. Envelope -->
+  <section class="stage envelope-stage" id="stage-envelope" aria-labelledby="envelope-title">
+    <div class="intro">
+      <p class="eyebrow">Special delivery</p>
+      <h1 id="envelope-title">For Chandana</h1>
+    </div>
+
+    <button class="envelope" type="button" data-action="open" aria-label="Open the invitation">
+      <span class="env-back"></span>
+      <span class="letter-peek" aria-hidden="true">
+        <span class="peek-dear">Dear Chandana,</span>
+        <span class="peek-line"></span>
+        <span class="peek-line"></span>
+      </span>
+      <span class="env-pocket" aria-hidden="true">
+        <svg viewBox="0 0 300 200" preserveAspectRatio="none">
+          <path d="M0 0 L150 88 L300 0 V200 H0 Z" fill="url(#pocketGrad)"/>
+          <path d="M0 200 L136 100 M300 200 L164 100" stroke="rgba(120,80,40,.14)" stroke-width="1.2" fill="none"/>
+          <path d="M0 0 L150 88 L300 0" stroke="rgba(120,80,40,.10)" stroke-width="1" fill="none"/>
+        </svg>
+      </span>
+      <span class="env-address" aria-hidden="true">
+        <span class="to">Open with a smile</span>
+        <span class="when">Sunday · September 27</span>
+      </span>
+      <span class="flap" aria-hidden="true">
+        <span class="flap-face flap-front"></span>
+        <span class="flap-face flap-back"></span>
+      </span>
+      <span class="seal" aria-hidden="true"><b>C</b></span>
+    </button>
+
+    <p class="tap-hint"><span>Tap to open</span></p>
+  </section>
+
+  <!-- 2. Letter -->
+  <section class="stage letter-stage" id="stage-letter" hidden aria-labelledby="letter-title">
+    <article class="paper letter">
+      <svg class="sprig tl" aria-hidden="true"><use href="#sprig"/></svg>
+      <svg class="sprig tr" aria-hidden="true"><use href="#sprig"/></svg>
+
+      <svg class="flourish line-in" style="--i:0" aria-hidden="true"><use href="#flourish"/></svg>
+      <h2 class="dear line-in" style="--i:1" id="letter-title" tabindex="-1">Dear Chandana,</h2>
+      <p class="knowing line-in" style="--i:2">I know, I know — you already said yes.</p>
+      <p class="line-in" style="--i:3">But a yes that good deserves a proper invitation. Wax seal and everything.</p>
+      <p class="officially line-in" style="--i:4">So, officially</p>
+      <p class="ask line-in" style="--i:5">Will you go on a second date with me?</p>
+      <p class="ask-date line-in" style="--i:6">Sunday, September 27</p>
+
+      <div class="choices line-in" style="--i:7">
+        <button class="btn btn-yes" type="button" data-action="yes">Yes, obviously</button>
+        <button class="btn btn-no" type="button" data-action="no">No</button>
+      </div>
+      <p class="no-note" id="no-note"></p>
+    </article>
+  </section>
+
+  <!-- 3. Accepted -->
+  <section class="stage accepted" id="stage-accepted" hidden aria-labelledby="accepted-title">
+    <h2 class="big line-in" style="--i:0" id="accepted-title" tabindex="-1">I knew it.</h2>
+    <p class="sub line-in" style="--i:1" id="accepted-sub">That's two yeses now. No take-backs.</p>
+    <p class="eyebrow line-in" style="--i:2">Sunday, September 27 · It's a date</p>
+    <button class="btn btn-light line-in" style="--i:3" type="button" data-action="continue">See the plan&nbsp;&nbsp;→</button>
+  </section>
+
+  <!-- 4. Plan -->
+  <section class="stage plan-stage" id="stage-plan" hidden aria-labelledby="plan-title">
+    <article class="paper plan">
+      <svg class="sprig tl" aria-hidden="true"><use href="#sprig"/></svg>
+      <svg class="sprig tr" aria-hidden="true"><use href="#sprig"/></svg>
+
+      <header class="plan-head">
+        <svg class="flourish reveal" style="--i:0" aria-hidden="true"><use href="#flourish"/></svg>
+        <p class="eyebrow reveal" style="--i:0">Sunday · September 27</p>
+        <h2 class="reveal" style="--i:1" id="plan-title" tabindex="-1">The Plan</h2>
+        <p class="lede reveal" style="--i:2">A day in three acts: flowers, light, and a little Victorian splendour.</p>
+      </header>
+
+      <ol class="timeline">
+        <li class="stop reveal" style="--i:3">
+          <span class="stop-marker" aria-hidden="true">I</span>
+          <div class="stop-body">
+            <p class="stop-time"><span class="time">11-ish <small>AM</small></span><span class="act">Flowers</span></p>
+            <h3 class="stop-name">Ariston</h3>
+            <p class="stop-kind">Flowers &amp; coffee bar · Union&nbsp;Square</p>
+            <p class="stop-blurb">Coffee surrounded by flowers. The prettiest way I could think of to start a Sunday.</p>
+            <a class="stop-map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Ariston%20Flowers%20%26%20Cafe%2C%2078%205th%20Ave%2C%20New%20York%2C%20NY%2010011"><svg aria-hidden="true"><use href="#pin"/></svg><span class="addr">78 5th Ave</span><span aria-hidden="true">↗</span><span class="sr-only"> (opens map)</span></a>
+          </div>
+        </li>
+
+        <li class="leg reveal" style="--i:4">
+          <p><span class="trains" aria-hidden="true"><span class="bullet">4</span><span class="bullet">5</span></span><span><span class="sr-only">Take the 4 or 5 train </span>Downtown to Fulton&nbsp;St</span></p>
+        </li>
+
+        <li class="stop reveal" style="--i:5">
+          <span class="stop-marker" aria-hidden="true">II</span>
+          <div class="stop-body">
+            <p class="stop-time"><span class="time">1:00 <small>PM</small></span><span class="act">Light</span></p>
+            <h3 class="stop-name">Mercer Labs</h3>
+            <p class="stop-kind">Museum of Art &amp; Technology · FiDi</p>
+            <p class="stop-blurb">Rooms made of light, sound and mirrors. Fair warning: we will take too many photos.</p>
+            <a class="stop-map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Mercer%20Labs%2C%2021%20Dey%20St%2C%20New%20York%2C%20NY%2010007"><svg aria-hidden="true"><use href="#pin"/></svg><span class="addr">21 Dey St</span><span aria-hidden="true">↗</span><span class="sr-only"> (opens map)</span></a>
+          </div>
+        </li>
+
+        <li class="leg reveal" style="--i:6">
+          <p><span class="trains" aria-hidden="true"><span class="bullet">4</span><span class="bullet">5</span></span><span><span class="sr-only">Take the 4 or 5 train </span>Uptown to Union&nbsp;Sq, then a short walk</span></p>
+        </li>
+
+        <li class="stop reveal" style="--i:7">
+          <span class="stop-marker" aria-hidden="true">III</span>
+          <div class="stop-body">
+            <p class="stop-time"><span class="time">3:00 <small>PM</small></span><span class="act">Splendour</span></p>
+            <h3 class="stop-name">Lillie’s Victorian Establishment</h3>
+            <p class="stop-kind">Late lunch · Union&nbsp;Square</p>
+            <p class="stop-blurb">Chandeliers, velvet and a very civilised late lunch. Top hats optional.</p>
+            <a class="stop-map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Lillie%27s%20Victorian%20Establishment%2C%2013%20E%2017th%20St%2C%20New%20York%2C%20NY%2010003"><svg aria-hidden="true"><use href="#pin"/></svg><span class="addr">13 E 17th St</span><span aria-hidden="true">↗</span><span class="sr-only"> (opens map)</span></a>
+          </div>
+        </li>
+      </ol>
+
+      <section class="notes reveal" style="--i:8" aria-labelledby="notes-title">
+        <h3 id="notes-title">Good to know</h3>
+        <ul>
+          <li>Comfy shoes. There's a little walking and two quick train rides.</li>
+          <li>Lunch is at 3, so snacking at Ariston is strongly encouraged.</li>
+          <li>What to bring: just you.</li>
+        </ul>
+      </section>
+
+      <div class="signoff reveal" style="--i:9">
+        <p>Can’t wait to see you on Sunday.</p>
+        <p class="name">— Vasanth</p>
+        <p class="ps" id="ps" hidden>P.S. Looking for the No button? Last seen floating somewhere over Union Square. 🎈</p>
+      </div>
+
+      <div class="actions reveal" style="--i:10">
+        <button class="btn btn-yes" type="button" data-action="reply"><svg aria-hidden="true"><use href="#heart"/></svg>Text Vasanth your yes</button>
+        <div class="row">
+          <a class="btn btn-outline" href="second-date.ics"><svg aria-hidden="true"><use href="#cal"/></svg>Add to Apple Calendar</a>
+          <a class="btn btn-outline" id="gcal" target="_blank" rel="noopener" href="#"><svg aria-hidden="true"><use href="#cal"/></svg>Add to Google Calendar</a>
+        </div>
+      </div>
+    </article>
+    <button class="replay" type="button" data-action="replay">↺ Replay the invitation</button>
+  </section>
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  // Everything Vasanth might want to tweak lives here.
+  var CONFIG = {
+    storageKey: "chandana-second-date-v1",
+    replyText: "Yes (again)! See you Sunday at Ariston, 11-ish ☕💐",
+    calendar: {
+      title: "Second date with Vasanth",
+      start: "20260927T150000Z", // 11:00 AM New York time
+      end: "20260927T210000Z",   //  5:00 PM New York time
+      location: "Ariston Flowers & Cafe, 78 5th Ave, New York, NY 10011",
+      details: "11-ish: Coffee among the flowers at Ariston (78 5th Ave)\n" +
+               "1:00 PM: Mercer Labs, Museum of Art & Technology (21 Dey St)\n" +
+               "3:00 PM: Late lunch at Lillie's Victorian Establishment (13 E 17th St)"
+    }
+  };
+
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $ = function (sel) { return document.querySelector(sel); };
+  var stages = {
+    envelope: $("#stage-envelope"),
+    letter: $("#stage-letter"),
+    accepted: $("#stage-accepted"),
+    plan: $("#stage-plan")
+  };
+  var announcer = $("#announcer");
+  var busy = false;
+  var triedNo = false;
+  var autoAdvance = null;
+  var noFloatedAt = 0;
+
+  function wait(ms) { return new Promise(function (r) { setTimeout(r, reduceMotion ? Math.min(ms, 60) : ms); }); }
+  function announce(msg) { announcer.textContent = ""; setTimeout(function () { announcer.textContent = msg; }, 30); }
+
+  function store(key, val) {
+    try {
+      if (val === null) localStorage.removeItem(key); else localStorage.setItem(key, val);
+    } catch (e) { /* storage unavailable: fine */ }
+  }
+  function read(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+
+  function show(name, opts) {
+    opts = opts || {};
+    var el = stages[name];
+    el.hidden = false;
+    el.classList.remove("is-leaving");
+    if (opts.instant) {
+      el.classList.add("shown");
+    } else {
+      el.classList.add("is-entering");
+      requestAnimationFrame(function () { el.classList.add("shown"); });
+      setTimeout(function () { el.classList.remove("is-entering"); }, 900);
+    }
+    document.body.dataset.stage = name;
+    var focusEl = el.querySelector("[tabindex='-1']");
+    if (focusEl) setTimeout(function () { focusEl.focus({ preventScroll: true }); }, opts.instant ? 0 : 400);
+  }
+
+  function hide(name) {
+    var el = stages[name];
+    if (el.hidden) return Promise.resolve();
+    el.classList.add("is-leaving");
+    return wait(480).then(function () {
+      el.hidden = true;
+      el.classList.remove("is-leaving", "is-entering", "shown");
+    });
+  }
+
+  // ---------- Ambient petals ----------
+  (function ambient() {
+    if (reduceMotion) return;
+    var bd = $("#backdrop");
+    for (var i = 0; i < 9; i++) {
+      var p = document.createElement("span");
+      p.className = "ambient";
+      p.style.left = (5 + i * 11 + (i % 3) * 3) + "%";
+      p.style.animationDuration = (16 + (i * 7) % 11) + "s";
+      p.style.animationDelay = (-i * 2.3) + "s";
+      p.style.setProperty("--dx", ((i % 2 ? 1 : -1) * (30 + i * 6)) + "px");
+      p.style.transform = "scale(" + (0.6 + (i % 4) * 0.15) + ")";
+      bd.appendChild(p);
+    }
+    document.addEventListener("visibilitychange", function () {
+      var state = document.hidden ? "paused" : "running";
+      document.querySelectorAll(".ambient").forEach(function (a) { a.style.animationPlayState = state; });
+    });
+  })();
+
+  // ---------- Petal burst ----------
+  function petalBurst() {
+    if (reduceMotion) return;
+    var layer = $("#petals");
+    var colors = ["#f4b8b8", "#e8a3a5", "#d97b86", "#f7d4c8", "#c24d5f", "#fbe3d3"];
+    var count = window.innerWidth < 600 ? 34 : 54;
+    for (var i = 0; i < count; i++) {
+      var wrap = document.createElement("span");
+      var petal = document.createElement("i");
+      wrap.className = "petal-fall";
+      wrap.style.left = Math.random() * 100 + "%";
+      wrap.style.animationDuration = (3.6 + Math.random() * 3.2) + "s";
+      wrap.style.animationDelay = (Math.random() * 1.4) + "s";
+      petal.style.setProperty("--w", (10 + Math.random() * 9) + "px");
+      petal.style.setProperty("--c", colors[i % colors.length]);
+      petal.style.setProperty("--sway", (1.1 + Math.random() * 1.2) + "s");
+      wrap.appendChild(petal);
+      layer.appendChild(wrap);
+    }
+    setTimeout(function () { layer.innerHTML = ""; }, 8500);
+  }
+
+  // ---------- Stage transitions ----------
+  function openEnvelope() {
+    if (busy || document.body.dataset.stage !== "envelope") return;
+    busy = true;
+    var env = stages.envelope;
+    env.classList.add("opened");
+    setTimeout(function () { env.classList.add("flap-behind"); }, reduceMotion ? 0 : 420);
+    wait(1500)
+      .then(function () { return hide("envelope"); })
+      .then(function () {
+        show("letter");
+        announce("The invitation is open.");
+        busy = false;
+      });
+  }
+
+  function floatNo(btn) {
+    if (btn.dataset.gone) return;
+    btn.dataset.gone = "1";
+    triedNo = true;
+    var r = btn.getBoundingClientRect();
+    var balloon = btn.cloneNode(true);
+    balloon.removeAttribute("data-action");
+    balloon.setAttribute("aria-hidden", "true");
+    balloon.tabIndex = -1;
+    balloon.classList.add("balloon");
+    balloon.style.left = r.left + "px";
+    balloon.style.top = r.top + "px";
+    balloon.style.width = r.width + "px";
+    balloon.style.height = r.height + "px";
+    document.body.appendChild(balloon);
+    // Keep its spot for a moment so the same tap can't land on Yes as it slides over.
+    btn.style.visibility = "hidden";
+    btn.style.pointerEvents = "none";
+    noFloatedAt = Date.now();
+    setTimeout(function () { btn.hidden = true; }, 700);
+    setTimeout(function () { balloon.remove(); }, 4000);
+    $("#ps").hidden = false;
+
+    var yes = $("[data-action='yes']");
+    yes.classList.add("only-choice");
+    var note = $("#no-note");
+    note.textContent = "Oops. The No button floated away. 🎈 Guess there’s only one answer left (which, to be fair, you already gave me).";
+    note.classList.add("show");
+    announce("The No button floated away. Only Yes is left.");
+    yes.focus({ preventScroll: true });
+  }
+
+  function accept() {
+    if (busy || document.body.dataset.stage !== "letter") return;
+    if (Date.now() - noFloatedAt < 700) return;
+    busy = true;
+    store(CONFIG.storageKey, triedNo ? "yes-after-no" : "yes");
+    if (triedNo) $("#accepted-sub").textContent = "The No button never stood a chance. Two yeses — no take-backs.";
+    hide("letter").then(function () {
+      show("accepted");
+      petalBurst();
+      announce("I knew it. It's a date: Sunday, September 27.");
+      busy = false;
+      autoAdvance = setTimeout(toPlan, reduceMotion ? 6000 : 5200);
+    });
+  }
+
+  function toPlan() {
+    if (busy || document.body.dataset.stage !== "accepted") return;
+    busy = true;
+    clearTimeout(autoAdvance);
+    hide("accepted").then(function () {
+      window.scrollTo(0, 0);
+      show("plan");
+      announce("Here's the plan for Sunday.");
+      busy = false;
+    });
+  }
+
+  function toast(msg) {
+    var t = $("#toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { t.classList.remove("show"); }, 3200);
+  }
+
+  function reply() {
+    var text = CONFIG.replyText;
+    var smsFallback = function () {
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        window.location.href = "sms:?&body=" + encodeURIComponent(text);
+        return true;
+      }
+      return false;
+    };
+    var copyFallback = function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text)
+          .then(function () { toast("Copied! Paste it to Vasanth 💌"); })
+          .catch(function () { toast(text); });
+      } else {
+        toast(text);
+      }
+    };
+    if (navigator.share) {
+      navigator.share({ text: text }).catch(function (e) {
+        if (e && e.name === "AbortError") return;
+        if (!smsFallback()) copyFallback();
+      });
+      return;
+    }
+    if (!smsFallback()) copyFallback();
+  }
+
+  function replay() {
+    store(CONFIG.storageKey, null);
+    window.location.href = window.location.pathname;
+  }
+
+  // ---------- Wiring ----------
+  var cal = CONFIG.calendar;
+  $("#gcal").href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + encodeURIComponent(cal.title) +
+    "&dates=" + cal.start + "/" + cal.end +
+    "&location=" + encodeURIComponent(cal.location) +
+    "&details=" + encodeURIComponent(cal.details) +
+    "&ctz=America/New_York";
+
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest("[data-action]");
+    if (!el) return;
+    var action = el.dataset.action;
+    if (action === "open") openEnvelope();
+    else if (action === "yes") accept();
+    else if (action === "no") { e.preventDefault(); floatNo(el); }
+    else if (action === "continue") toPlan();
+    else if (action === "reply") reply();
+    else if (action === "replay") replay();
+  });
+  // Float away the moment a finger or cursor presses on No, before the click lands.
+  var noBtn = $("[data-action='no']");
+  noBtn.addEventListener("pointerdown", function (e) {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    e.preventDefault();
+    floatNo(noBtn);
+  });
+
+  // ---------- Boot ----------
+  var params = new URLSearchParams(window.location.search);
+  if (params.has("reset")) {
+    store(CONFIG.storageKey, null);
+    history.replaceState(null, "", window.location.pathname);
+  }
+  var saved = read(CONFIG.storageKey);
+  if (saved) {
+    if (saved === "yes-after-no") triedNo = true;
+    stages.envelope.hidden = true;
+    show("plan", { instant: true });
+  } else {
+    stages.envelope.classList.add("shown");
+  }
+  if (triedNo) $("#ps").hidden = false;
+})();
+</script>
+</body>
+</html>
